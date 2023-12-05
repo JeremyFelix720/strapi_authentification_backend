@@ -56,8 +56,8 @@ Ajoutez dans votre fichier requests.http les requêtes suivantes :
 ## Créer une collection de jeux gratuits
 
 Créer un Content Type `FreeGame` avec les champs suivants :
-nom, description, image
-Rendez ce Content Type public
+nom, description, image [OK]
+Rendez ce Content Type public [OK]
 
 Ajouter dans votre fichier requests.http les requêtes suivantes :
 - Créer un jeu gratuit
