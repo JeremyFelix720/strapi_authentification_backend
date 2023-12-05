@@ -1,0 +1,45 @@
+###
+// Rajouter un utilisateur (automatiquement connecté) :
+POST http://localhost:1337/api/auth/local/register
+content-type: application/json
+
+{
+  "username": "Toto",
+  "email": "toto@gmail.com",
+  "password": "asdq37dqqsd7"
+}
+
+###
+// Authentifier un utilisateur (le jwt s'affiche ici) :
+POST http://localhost:1337/api/auth/local
+content-type: application/json
+
+{
+  "identifier": "toto@gmail.com",
+  "password": "asdq37dqqsd7"
+}
+
+###
+// Récupérer les données de l'utilisateur avec un des jwt généré d'un utilisateur :
+GET http://localhost:1337/api/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzAxNzc1MjM1LCJleHAiOjE3MDQzNjcyMzV9.XSA8649V-k63J_kJdjoqjS66myey5c5sUQ3rS8Kq1mM
+
+###
+// Récupérer les données de l'utilisateur (avec un des jwt généré d'un utilisateur) :
+GET http://localhost:1337/api/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzAxNzc1MDI3LCJleHAiOjE3MDQzNjcwMjd9.oQZZLcD1ifI7zhVo8Y_DkSrJ0h49G4sw3U4TaRplReM
+
+###
+// Changer le mot de passe d'un utilisateur (avec un des jwt généré d'un utilisateur)
+
+//POST http://localhost:1337/api/auth/custom/change-password
+
+POST http://localhost:1337/api/auth/change-password
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzAxNzc1MDI3LCJleHAiOjE3MDQzNjcwMjd9.oQZZLcD1ifI7zhVo8Y_DkSrJ0h49G4sw3U4TaRplReM
+
+{
+  "currentPassword": "sfzf34rz6",
+  "password": "asdq37dqqsd7",
+  "passwordConfirmation": "asdq37dqqsd7"
+}
