@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "official_games",
+  "info": {
+    "singularName": "official-game",
+    "pluralName": "official-games",
+    "displayName": "OfficialGame"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

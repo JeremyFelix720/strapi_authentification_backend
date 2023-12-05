@@ -394,6 +394,39 @@ export interface ApiFreeGameFreeGame extends Schema.CollectionType {
   };
 }
 
+export interface ApiOfficialGameOfficialGame extends Schema.CollectionType {
+  collectionName: 'official_games';
+  info: {
+    singularName: 'official-game';
+    pluralName: 'official-games';
+    displayName: 'OfficialGame';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    image: Attribute.String & Attribute.Required;
+    price: Attribute.Decimal & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::official-game.official-game',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::official-game.official-game',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -719,6 +752,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::free-game.free-game': ApiFreeGameFreeGame;
+      'api::official-game.official-game': ApiOfficialGameOfficialGame;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;

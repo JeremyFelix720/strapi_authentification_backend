@@ -38,7 +38,7 @@ RETENEZ-BIEN VOS IDENTIFIANTS (et ne pas devoir les saisir 13893173813678 fois a
 
 ## Créer un utilisateur
 
-Créez un utilisateur dans l'interface d'administration avec un mot de passe et un rôle `authenticated`
+Créez un utilisateur dans l'interface d'administration avec un mot de passe et un rôle `authenticated` [OK]
 
 > MDP utilisateur superAdmin = ```6TiNb2maViDFX.D```
 
@@ -60,15 +60,15 @@ nom, description, image [OK]
 Rendez ce Content Type public [OK]
 
 Ajouter dans votre fichier requests.http les requêtes suivantes :
-- Créer un jeu gratuit
-- Récupérer tous les jeux gratuits
-- Récupérer un jeu gratuit
-- Modifier un jeu gratuit
-- Supprimer un jeu gratuit
+- Créer un jeu gratuit [OK]
+- Récupérer tous les jeux gratuits [OK]
+- Récupérer un jeu gratuit [OK]
+- Modifier un jeu gratuit [OK]
+- Supprimer un jeu gratuit [OK]
 
 ## Créer une collection de jeux payants
 
-Créerss un Content Type `OfficialGame` avec les champs suivants :
+Créer un Content Type `OfficialGame` avec les champs suivants :
 
 nom, description, image, prix
 Rendez ce Content Type privé au rôle `authenticated`
