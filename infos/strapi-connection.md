@@ -77,11 +77,11 @@ Comment récupérer un token d'authentification ?
 A vous de trouver l'information mais vous avez surement déjà vu un token JWT lors de précédents projets ^^
 
 Ajoutez dans votre fichier requests.http les requêtes suivantes :
-- Créer un jeu payant
-- Récupérer tous les jeux payants
-- Récupérer un jeu payant
-- Modifier un jeu payant
-- Supprimer un jeu payant
+- Créer un jeu payant [OK]
+- Récupérer tous les jeux payants [OK]
+- Récupérer un jeu payant [OK]
+- Modifier un jeu payant [OK]
+- Supprimer un jeu payant [OK]
 
 ## Créer un token d'authorisation
 

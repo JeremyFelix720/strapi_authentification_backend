@@ -1,5 +1,4 @@
-// La structure des routes pour manipuler les données en Strpi:
-// https://docs.strapi.io/dev-docs/api/rest
+// Structure des routes pour manipuler les données en Strapi : https://docs.strapi.io/dev-docs/api/rest
 
 ###
 // Rajouter un utilisateur (automatiquement connecté) :
@@ -34,9 +33,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxN
 
 ###
 // Changer le mot de passe d'un utilisateur (avec un des jwt généré d'un utilisateur)
-
-//POST http://localhost:1337/api/auth/custom/change-password
-
 POST http://localhost:1337/api/auth/change-password
 content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzAxNzc1MDI3LCJleHAiOjE3MDQzNjcwMjd9.oQZZLcD1ifI7zhVo8Y_DkSrJ0h49G4sw3U4TaRplReM
@@ -48,7 +44,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxN
 }
 
 
-// PARTIE JEUX GRATUITS
+// JEUX GRATUITS
 
 ###
 // Créer un jeu gratuit :
@@ -115,7 +111,7 @@ DELETE http://localhost:1337/api/free-games/4
 content-type: application/json
 
 
-// PARTIE JEUX GRATUITS
+// JEUX PAYANTS
 
 ###
 // Créer un jeu payant :
